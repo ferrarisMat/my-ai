@@ -1,0 +1,53 @@
+{
+  "name": "my-ai",
+  "version": "1.0.0",
+  "description": "personal day-to-day ai assistant",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+    "build": {
+    "appId": "com.example.my-ai",
+    "productName": "My AI",
+    "files": [
+      "index.html",
+      "main.js",
+      "renderer.js"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferrarisMat/my-ai.git"
+  },
+  "keywords": [
+    "ai-assistant;",
+    "ai"
+  ],
+  "author": "ferrarisMat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ferrarisMat/my-ai/issues"
+  },
+  "homepage": "https://github.com/ferrarisMat/my-ai#readme",
+  "devDependencies": {
+    "electron": "^24.1.3",
+    "electron-builder": "^23.6.0"
+  }
+}
